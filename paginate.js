@@ -50,6 +50,13 @@ export default function DynamicPagination({ totalPage, handlePageClick }) {
     );
 }
 
+#calling
+    const handlePageClick = (event) => {
+        setPage(event.selected + 1);
+        refetch();
+    }
+<DynamicPagination handlePageClick={handlePageClick} totalPage={brandList?.data?.meta?.total_pages} />
+
 
 #icon
 export const PaginationRightIcon = () => {
