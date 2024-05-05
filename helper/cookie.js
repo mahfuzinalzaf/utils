@@ -22,6 +22,24 @@ export function getCookie(name) {
     return null;
 }
 
-export function deleteCookie() {
-    document.cookie = 'auth_token=; Max-Age=-99999999;';
+export async function deleteCookie(router) {
+    const apiUrl = getApiUrl(ENDPOINT.admin, ENDPOINT.auth.logout);
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${getCookie(process.env.NEXT_PUBLIC_ADMIN_SECRET)}`
+            },
+        });
+
+        if (response.ok) {
+            document.cookie = `${process.env.NEXT_PUBLIC_ADMIN_SECRET}=; Max-Age=-99999999; path=/;`;
+            router.push("/admin-login");
+            message.success("Logged out successfully.");
+        }
+    } catch (error) {
+        
+    }
 }
+// deleteCookie(router)
