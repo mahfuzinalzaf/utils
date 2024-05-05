@@ -67,3 +67,13 @@ export const useLoginHandler = () => {
         isLoading,
     };
 };
+
+
+// const { handleLogin, isLoading } = useLoginHandler();
+// await handleLogin({
+//     loginData: loginData,
+//     redirectUrl: "/admin/dashboard",
+//     secretName: process.env.NEXT_PUBLIC_ADMIN_SECRET,
+//     url: getApiUrl(ENDPOINT.admin, ENDPOINT.auth.login),
+//     remember: remember,
+// })
