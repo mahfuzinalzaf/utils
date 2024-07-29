@@ -1,0 +1,10 @@
+Better Comments - For comments..
+Auto Rename Tag - When you rename starting tag then it's automaticly renamed from end tag..
+Code Time and Waka Time - It's provide information about ow many times we spent in vs code..
+Css Peek - Your can see all css when you hover a class or id
+Hungry Delete - Delete empty space using one click..
+Live Server - You can open html file for live preview based on your file save..
+Prettier - Code formatter based on file save..
+Simple React Snippets - It's basically a snipt for your react code..
+vscode-icons - For workspace file icon..
+Monokai Pro - It's a professional theme for vs code
